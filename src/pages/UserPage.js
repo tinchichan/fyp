@@ -1,3 +1,4 @@
+import React, { Component }  from 'react';
 import { Helmet } from 'react-helmet-async';
 import { filter } from 'lodash';
 import { sentenceCase } from 'change-case';
@@ -149,7 +150,7 @@ export default function UserPage() {
   return (
     <>
       <Helmet>
-        <title> User | Minimal UI </title>
+        <title> Students </title>
       </Helmet>
 
       <Container>

@@ -1,3 +1,4 @@
+import React, { Component }  from 'react';
 // @mui
 import PropTypes from 'prop-types';
 import { Box, Card, Paper, Typography, CardHeader, CardContent } from '@mui/material';

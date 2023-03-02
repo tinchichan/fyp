@@ -1,6 +1,7 @@
+import React, { Component }  from 'react';
 import PropTypes from 'prop-types';
 // @mui
-import { Grid } from '@mui/material';
+import { Grid ,Divider} from '@mui/material';
 import ShopProductCard from './ProductCard';
 
 // ----------------------------------------------------------------------

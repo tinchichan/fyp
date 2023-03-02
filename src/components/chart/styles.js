@@ -1,3 +1,4 @@
+import React, { Component }  from 'react';
 // @mui
 import { alpha, useTheme } from '@mui/material/styles';
 import { GlobalStyles } from '@mui/material';

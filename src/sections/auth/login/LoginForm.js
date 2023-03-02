@@ -1,3 +1,4 @@
+import React, { Component }  from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 // @mui
@@ -40,6 +41,7 @@ export default function LoginForm() {
 
       <Stack direction="row" alignItems="center" justifyContent="space-between" sx={{ my: 2 }}>
         <Checkbox name="remember" label="Remember me" />
+          <p>Remember me</p>
         <Link variant="subtitle2" underline="hover">
           Forgot password?
         </Link>

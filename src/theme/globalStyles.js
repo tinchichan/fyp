@@ -1,3 +1,4 @@
+import React, { Component }  from 'react';
 // @mui
 import { GlobalStyles as MUIGlobalStyles } from '@mui/material';
 

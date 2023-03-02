@@ -1,4 +1,5 @@
 // @mui
+import React, { Component }  from 'react';
 import PropTypes from 'prop-types';
 import { Card, Typography, CardHeader, CardContent } from '@mui/material';
 import { Timeline, TimelineDot, TimelineItem, TimelineContent, TimelineSeparator, TimelineConnector } from '@mui/lab';

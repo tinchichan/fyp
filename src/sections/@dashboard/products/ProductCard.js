@@ -1,31 +1,42 @@
+import React, { Component }  from 'react';
 import PropTypes from 'prop-types';
 // @mui
-import { Box, Card, Link, Typography, Stack } from '@mui/material';
+import { Box, Card, Typography, Stack, Button} from '@mui/material';
 import { styled } from '@mui/material/styles';
 // utils
+import { Router,Route, Routes,useNavigate, Link } from "react-router-dom";
 import { fCurrency } from '../../../utils/formatNumber';
 // components
 import Label from '../../../components/label';
 import { ColorPreview } from '../../../components/color-utils';
+
 
 // ----------------------------------------------------------------------
 
 const StyledProductImg = styled('img')({
   top: 0,
   width: '100%',
-  height: '100%',
-  objectFit: 'cover',
+  height: '85%',
+  objectFit: 'fill',
   position: 'absolute',
 });
 
 // ----------------------------------------------------------------------
 
 ShopProductCard.propTypes = {
-  product: PropTypes.object,
+  product: PropTypes.object
 };
 
+
+
 export default function ShopProductCard({ product }) {
-  const { name, cover, price, colors, status, priceSale } = product;
+  const { name, cover, status, link } = product;
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+  navigate('/dashboard', { replace: true });
+  };
 
   return (
     <Card>
@@ -33,7 +44,6 @@ export default function ShopProductCard({ product }) {
         {status && (
           <Label
             variant="filled"
-            color={(status === 'sale' && 'error') || 'info'}
             sx={{
               zIndex: 9,
               top: 16,
@@ -49,29 +59,9 @@ export default function ShopProductCard({ product }) {
       </Box>
 
       <Stack spacing={2} sx={{ p: 3 }}>
-        <Link color="inherit" underline="hover">
           <Typography variant="subtitle2" noWrap>
-            {name}
+              <Button component={Link} to={link} variant="contained" color="primary">{name}</Button>
           </Typography>
-        </Link>
-
-        <Stack direction="row" alignItems="center" justifyContent="space-between">
-          <ColorPreview colors={colors} />
-          <Typography variant="subtitle1">
-            <Typography
-              component="span"
-              variant="body1"
-              sx={{
-                color: 'text.disabled',
-                textDecoration: 'line-through',
-              }}
-            >
-              {priceSale && fCurrency(priceSale)}
-            </Typography>
-            &nbsp;
-            {fCurrency(price)}
-          </Typography>
-        </Stack>
       </Stack>
     </Card>
   );

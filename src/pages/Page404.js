@@ -1,3 +1,4 @@
+import React, { Component }  from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link as RouterLink } from 'react-router-dom';
 // @mui
@@ -22,7 +23,7 @@ export default function Page404() {
   return (
     <>
       <Helmet>
-        <title> 404 Page Not Found | Minimal UI </title>
+        <title> 404 Page Not Found </title>
       </Helmet>
 
       <Container>

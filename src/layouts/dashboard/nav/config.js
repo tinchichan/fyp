@@ -1,3 +1,4 @@
+import React, { Component }  from 'react';
 // component
 import SvgColor from '../../../components/svg-color';
 
@@ -17,19 +18,29 @@ const navConfig = [
     icon: icon('ic_user'),
   },
   {
-    title: 'product',
-    path: '/dashboard/products',
-    icon: icon('ic_cart'),
+    title: 'diagrams tutorials',
+    path: '/dashboard/tutorial',
+    icon: icon('diagram-svgrepo-com'),
   },
   {
-    title: 'blog',
+    title: 'playground',
+    path: '/dashboard/playground',
+    icon: icon('playground-park-play-city-garden-svgrepo-com'),
+  },
+  {
+    title: 'game',
     path: '/dashboard/blog',
-    icon: icon('ic_blog'),
+    icon: icon('game-svgrepo-com'),
   },
   {
     title: 'login',
     path: '/login',
     icon: icon('ic_lock'),
+  },
+  {
+    title: 'register',
+    path: '/register',
+    icon: icon('register-svgrepo-com'),
   },
   {
     title: 'Not found',
