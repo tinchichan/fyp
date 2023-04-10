@@ -22,7 +22,7 @@ export default function DashboardAppPage() {
   return (
     <>
       <Helmet>
-        <title> Dashboard | Minimal UI </title>
+        <title> Software Engineering Learning System </title>
       </Helmet>
 
       <Container maxWidth="xl">
@@ -46,7 +46,7 @@ export default function DashboardAppPage() {
 
           <Grid item xs={12} md={6} lg={8}>
             <AppNewsUpdate
-              title="News Update"
+              title="Job Board"
               list={[...Array(5)].map((_, index) => ({
                 id: faker.datatype.uuid(),
                 title: faker.name.jobTitle(),
@@ -59,15 +59,16 @@ export default function DashboardAppPage() {
 
           <Grid item xs={12} md={6} lg={4}>
             <AppOrderTimeline
-              title="Order Timeline"
-              list={[...Array(5)].map((_, index) => ({
+              title="Course Timeline"
+              list={[...Array(6)].map((_, index) => ({
                 id: faker.datatype.uuid(),
                 title: [
-                  '1983, orders, $4220',
-                  '12 Invoices have been paid',
-                  'Order #37745 from September',
-                  'New order placed #XF-2356',
-                  'New order placed #XF-2346',
+                  'Assignment 1 Deadline',
+                  'Mid-term Test',
+                  'Assignment 2 Deadline',
+                  'Assignment 3 Deadline',
+                  'Assignment 4 Deadline',
+                  'Exam'
                 ][index],
                 type: `order${index + 1}`,
                 time: faker.date.past(),
@@ -79,11 +80,11 @@ export default function DashboardAppPage() {
             <AppTasks
               title="Tasks"
               list={[
-                { id: '1', label: 'Create FireStone Logo' },
-                { id: '2', label: 'Add SCSS and JS files if required' },
-                { id: '3', label: 'Stakeholder Meeting' },
-                { id: '4', label: 'Scoping & Estimations' },
-                { id: '5', label: 'Sprint Showcase' },
+                { id: '1', label: 'Assignment 1' },
+                { id: '2', label: 'Assignment 2' },
+                { id: '3', label: 'Assignment 3' },
+                { id: '4', label: 'Assignment 4' },
+                { id: '5', label: 'Assignment 5' },
               ]}
             />
           </Grid>

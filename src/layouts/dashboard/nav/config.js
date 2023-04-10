@@ -38,11 +38,6 @@ const navConfig = [
     icon: icon('ic_lock'),
   },
   {
-    title: 'register',
-    path: '/register',
-    icon: icon('register-svgrepo-com'),
-  },
-  {
     title: 'Not found',
     path: '/404',
     icon: icon('ic_disabled'),

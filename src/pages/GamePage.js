@@ -2,10 +2,7 @@ import React, { Component }  from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Grid, Button, Container, Stack, Typography } from '@mui/material';
 // components
-import Iconify from '../components/iconify';
-import { BlogPostCard, BlogPostsSort, BlogPostsSearch } from '../sections/@dashboard/blog';
-// mock
-import POSTS from '../_mock/blog';
+
 
 // ----------------------------------------------------------------------
 
@@ -24,10 +21,11 @@ export default function BlogPage() {
         <title>Game Time</title>
       </Helmet>
 
-      <Container>
           <h1>Let's play the Game!</h1>
-        
-      </Container>
+          <div>
+            <iframe frameBorder="0" src="https://tinchichan.github.io/fyp-software-engineering-monogatari/" width="100%" height="800"></iframe>
+          </div>
+
     </>
   );
 }

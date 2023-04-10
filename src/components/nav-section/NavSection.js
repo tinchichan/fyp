@@ -13,10 +13,21 @@ NavSection.propTypes = {
 };
 
 export default function NavSection({ data = [], ...other }) {
+  const final_array = data.filter((items) => {
+    if (sessionStorage.getItem('auth-token') == "student123"){
+      if (items.title == 'user') {
+        return false
+      } else {
+        return true
+      }
+    } else {
+      return true
+    }
+  })
   return (
     <Box {...other}>
       <List disablePadding sx={{ p: 1 }}>
-        {data.map((item) => (
+        {final_array.map((item) => (
           <NavItem key={item.title} item={item} />
         ))}
       </List>
@@ -32,6 +43,16 @@ NavItem.propTypes = {
 
 function NavItem({ item }) {
   const { title, path, icon, info } = item;
+
+  if (title == 'user') {
+    if(sessionStorage.getItem('auth-token') == "admin123") {
+      console.log('good token. Log in.')
+      
+    } else if (sessionStorage.getItem('auth-token') == "student123"){
+      console.log('good token. Log in.')
+      
+    }
+  }
 
   return (
     <StyledNavItem

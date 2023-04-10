@@ -9,7 +9,8 @@ import useResponsive from '../hooks/useResponsive';
 import Logo from '../components/logo';
 import Iconify from '../components/iconify';
 // sections
-import { LoginForm } from '../sections/auth/login';
+//import { LoginForm } from '../sections/auth/login';
+import Login from '../components/Login';
 
 // ----------------------------------------------------------------------
 
@@ -100,7 +101,7 @@ export default function LoginPage({onLogin}) {
               </Typography>
             </Divider>
 
-            <LoginForm />
+            <Login />
           </StyledContent>
         </Container>
       </StyledRoot>
