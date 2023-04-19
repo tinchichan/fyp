@@ -76,7 +76,7 @@ export default function LoginPage({onLogin}) {
               Sign in
             </Typography>
 
-            <Typography variant="body2" sx={{ mb: 5 }}>
+            {/* <Typography variant="body2" sx={{ mb: 5 }}>
               Don’t have an account? {''}
               <Link variant="subtitle2">Get started</Link>
             </Typography>
@@ -99,7 +99,7 @@ export default function LoginPage({onLogin}) {
               <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                 OR
               </Typography>
-            </Divider>
+            </Divider> */}
 
             <Login />
           </StyledContent>

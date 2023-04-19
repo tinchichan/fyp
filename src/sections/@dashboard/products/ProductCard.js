@@ -16,7 +16,7 @@ import { ColorPreview } from '../../../components/color-utils';
 const StyledProductImg = styled('img')({
   top: 0,
   width: '100%',
-  height: '85%',
+  height: '80%',
   objectFit: 'fill',
   position: 'absolute',
 });

@@ -1,6 +1,8 @@
 import React, { Component ,useRef, useState, useEffect, useHistory} from 'react';
 import { Navigate } from 'react-router-dom';
 import { addMinutes } from 'date-fns';
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
 
 export default function Login () {
   const [isLoggedIn , setIsLoggedIn] = useState(false)
@@ -74,21 +76,35 @@ export default function Login () {
           <form onSubmit={handleLogin}>
             <div>
               <label for="username">Username:</label>
-              <input 
+              <TextField 
+                margin="normal"
+                required
+                fullWidth
                 type="text"
                 value={username} 
                 onChange={handleUsernameChange} 
-                placeholder='User Name'/>
+                placeholder='User Name'
+                autoComplete="username"
+                autoFocus/>
             </div>
             <div>
               <label>Password:</label>
-              <input 
+              <TextField 
+                margin="normal"
+                required
+                fullWidth
                 type="password"
                 value={password} 
                 onChange={handlePasswordChange} 
-                placeholder='Password' />
+                placeholder='Password'
+                autoComplete="password"/>
             </div>
-            <button type="submit">Login</button>
+            <Button fullWidth
+            variant="contained"
+            sx={{ mt: 3, mb: 2 }} 
+            type="submit">
+              Login
+            </Button>
           </form>
           </section>
           </>

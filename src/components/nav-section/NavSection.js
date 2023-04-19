@@ -15,12 +15,15 @@ NavSection.propTypes = {
 export default function NavSection({ data = [], ...other }) {
   const final_array = data.filter((items) => {
     if (sessionStorage.getItem('auth-token') == "student123"){
-      if (items.title == 'user') {
+      if (items.title == 'user' || items.title == 'login') {
         return false
       } else {
         return true
       }
     } else {
+      if (items.title == 'login'){
+        return false;
+      }
       return true
     }
   })
